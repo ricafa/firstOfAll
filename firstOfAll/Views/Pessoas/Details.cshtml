@@ -1,0 +1,48 @@
+﻿@model firstOfAll.Models.Pessoa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nascimento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nascimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ativo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ativo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.peso)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.peso)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.numerocalcado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.numerocalcado)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

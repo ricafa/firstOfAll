@@ -1,0 +1,59 @@
+﻿@model IEnumerable<firstOfAll.Models.Pessoa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numerocalcado)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numerocalcado)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
